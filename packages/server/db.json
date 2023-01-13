@@ -1,0 +1,17 @@
+{
+  "todo": [
+    {
+      "id": "todo-1",
+      "title": "Learn React",
+      "done": true
+    },
+    {
+      "id": "todo-2",
+      "title": "Buy milk",
+      "done": false
+    },
+    {
+      "id": "YuFp51E"
+    }
+  ]
+}
