@@ -1,21 +1,33 @@
-import { useGetTodosQuery } from './app/api/todo';
+import { createTheme, ThemeProvider, Grid } from '@mui/material';
+import CssBaseline from '@mui/material/CssBaseline';
 
-import Todo from './features/todo/Todo';
+import TodoList from './features/todo/TodoList';
+import Nav from './ui/Nav/Nav';
+
+const theme = createTheme({
+  palette: {
+    mode: 'dark',
+  },
+});
 
 function App() {
-  const apiUrl = import.meta.env;
-  console.log('api', apiUrl);
-  const { data, error, isLoading } = useGetTodosQuery(null);
-  console.log(data);
-
   return (
-    <div>
-      <h1>TODO App</h1>
-      <Todo />
-      <Todo />
-      <Todo />
-      <Todo />
-    </div>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Nav />
+      <Grid
+        container
+        sx={{
+          padding: '16px',
+        }}
+      >
+        <Grid item md={2} xs={12} />
+        <Grid item md={8} xs={12}>
+          <TodoList />
+        </Grid>
+        <Grid item md={2} xs={12} />
+      </Grid>
+    </ThemeProvider>
   );
 }
 

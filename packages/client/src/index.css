@@ -1,9 +1,5 @@
-body {
+/* body {
   color: rgb(0 0 0 / 50%);
-  background-image: linear-gradient(
-    to bottom,
-    rgb(114, 114, 186),
-    rgb(170, 232, 232)
-  );
+  background-image: linear-gradient(to bottom, rgb(0, 0, 0), rgb(0, 24, 54));
   background-attachment: fixed;
-}
+} */

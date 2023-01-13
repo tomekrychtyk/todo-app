@@ -1,7 +1,7 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
-import { Todo, TodosState } from './interfaces';
+import { ITodo, ITodosState } from './interfaces';
 
-const initialState: TodosState = {
+const initialState: ITodosState = {
   items: [],
 };
 
@@ -9,7 +9,7 @@ const todosSlice = createSlice({
   name: 'todos',
   initialState,
   reducers: {
-    receivedTodos(state, action: PayloadAction<Todo[]>) {
+    receivedTodos(state, action: PayloadAction<ITodo[]>) {
       state.items = action.payload;
     },
   },
